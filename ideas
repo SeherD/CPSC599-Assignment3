@@ -2,3 +2,7 @@
 - count the number of training samples
 - rotate, flip, blur, or manipulate the color balance of the image in a way that the label remains valid to increase the number of samples for classes that don't have as much
 - number of classes
+- We train a model for the secondary task, remove the final layers, and replace them with new layers appropriate to the primary task. 
+- we will try to use the flower network from class? the earlier layers will be trained to identify features in images of like shapes and lines and edges?
+- We then train only the new layers or fine-tune the entire network for the primary task.
+- we can freeze the earlier layers and then exchange the later layers 
