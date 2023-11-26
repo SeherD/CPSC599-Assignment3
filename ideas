@@ -2,7 +2,12 @@ A report (maximum two pages) highlighting different approaches to improving your
 - count the number of classes and training samples per class
 - 10 classes, 28 - 49 samples per class
 - not very many training samples, we can rotate, flip, blur, or manipulate the color balance of the image in a way that the label remains valid to increase the number of training samples (especially for classes that don't have as many samples)
+- first manipulate colours for samples with less than 50 to have 50, then flip all 50 samples, so each class has 100 training samples
 - to make the images the same size, we can stretch the images to 214 x 214 rather than crop, so we keep the whole shape of the image
+
+- 100 samples per class is still not a very large dataset, so we will use transfer learning with the StanfordCars cars dataset.
+- we have a small dataset that is quite similar to the larger dataset, so we can train the model on the large dataset, freeze all but the last few layers, so we use the features learned on the larger dataset to train the classifier for this dataset in particular
+
 - we can use transfer learning technique to train a model for a similar task, remove the final layers, and replace them with new layers to train for identifying these cars. 
 - we will try to use the https://pytorch.org/vision/stable/generated/torchvision.datasets.StanfordCars.html#torchvision.datasets.StanfordCars cars dataset to train the earlier layers that will identify features in images like shapes and lines and edges and car features?
 - we can freeze the earlier layers and then exchange the later layers for new empty layers
