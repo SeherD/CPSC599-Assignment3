@@ -1,4 +1,4 @@
 - stretch to 214 x 214
 - count the number of training samples
-- add gaussian blur and flip images to increase the number of samples for classes that don't have as much
+- rotate, flip, blur, or manipulate the color balance of the image in a way that the label remains valid to increase the number of samples for classes that don't have as much
 - number of classes
